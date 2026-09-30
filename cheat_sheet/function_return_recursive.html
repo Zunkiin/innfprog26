@@ -52,6 +52,22 @@
         }
 
         countdown(10)
+
+        //LEGG sammen alle tall i en array
+        const tall = [1, 5, 66, 7, 42, 333, 54, 7]
+
+        function addAll(array) {
+            let sum = 0
+
+            array.map(n => {
+                sum += n
+            })
+
+            const nump = document.createElement("p")
+            nump.innerHTML = sum
+            document.body.appendChild(nump)
+        }
+        addAll(tall)
     </script>
 </body>
 </html>
