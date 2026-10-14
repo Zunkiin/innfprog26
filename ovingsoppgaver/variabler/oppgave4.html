@@ -11,10 +11,14 @@
     </section>
 
     <script>
-        const name = Patrik
-        const mail = "paber0904@hiof.no"
+        const name = "Patrik"
+        const email = "paber0904@hiof.no"
 
+        //Bygge emailen med template literal:
+        const emailLink = `<a href="mailto:${email}">Send mail til ${name}</a>`
 
+        //print email link til HTML element med id maillink
+        document.getElementById("maillink").innerHTML = emailLink
     </script>
 </body>
 </html>

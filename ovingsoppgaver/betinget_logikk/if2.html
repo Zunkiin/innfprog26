@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 2 betinget logikk</title>
+</head>
+<body>
+    <section>
+        <p id="myage"></p>
+    </section>
+
+    <script>
+        const age = 30
+
+        let myage = "";
+
+        if (age < 18) {
+            myage = "Du er ikke myndig";
+        } else if (age >= 18 && age <= 62) {
+            myage = "Du er myndig og klar for studier og arbeidslivet";
+        } else {
+            myage = "Du er pensjonsklar!";
+        }
+
+        document.getElementById("myage").innerHTML = myage;
+    </script>
+    
+</body>
+</html>
