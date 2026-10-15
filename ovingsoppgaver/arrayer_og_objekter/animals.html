@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oppgave 2 arrayer og objekter</title>
+</head>
+<body>
+<section>
+    <p id="setning"></p>
+</section>
+    <script>
+        //Lag variabel med array:
+         const dyr = [`hest`, `hund`, `esel`, `gris`, `birk`, `ape`, `tiger`, `gorilla`, `pingvin`, `slange`];
+
+         const animals = [`horse`, `dog`, `donkey`, `pig`, `birk`, `monkey`, `tiger`, `gorilla`, `penguin`, `snake`]
+
+         //Template literal med dyrene og oversettelser på index 2 og 8
+         const tekst = `${dyr[2]} er et dyr. Det heter ${animals[2]} på engelsk.
+         ${dyr[8]} er også et dyr, som heter ${animals[8]} på engelsk.`
+
+         document.getElementById("setning").innerHTML = tekst
+
+    </script>
+</body>
+</html>

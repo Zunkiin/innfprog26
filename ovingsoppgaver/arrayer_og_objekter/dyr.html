@@ -16,8 +16,13 @@
 
         const dyr = [`hest`, `hund`, `esel`, `gris`, `birk`, `ape`, `tiger`, `gorilla`, `pingvin`, `slange`];
 
-        const tekst = `Her er det listet opp noen dyr, for ekesempel: ${dyr.join(`, `)}.`;
-        console.log(tekst);
+        //Template literal med dyrene på index 3 og 7
+        const tekst = `Her er det listet opp noen dyr, for ekesempel: ${dyr[3]} og ${dyr[7]}`
+
+
+        //.join for å liste alle
+        // const tekst = `Her er det listet opp noen dyr, for ekesempel: ${dyr.join(`, `)}.`;
+        
 
         document.getElementById("utskrift").innerHTML = tekst
 
