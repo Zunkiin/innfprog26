@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1 id="utskrift">Totalprisen er: </h1>
+    </section>
+        <script>
+
+            let handlekurv = [
+                { vare: "Pizza", pris: 130 },
+                { vare: "Brus", pris: 30 },
+                { vare: "Godteriburger", pris: 50 }
+            ]
+            for (let h in handlekurv) [
+                console.log(handlekurv[h].vare + " = " + handlekurv[h].pris + "kr")
+            ]
+            //totalpris metode 1
+            let sum = 0
+            for(const kjøp of handlekurv) {
+                sum = sum + Number(kjøp.pris)
+            }
+            console.log("1 metode sum: " + sum)
+
+            //totalpris metode 2
+            let totalPris = 0
+            handlekurv.map(h => {totalPris += h.pris})
+
+            console.log("2 metode sum: " + totalPris)
+
+            //totalpris metode 3
+            let total = 0
+            handlekurv.forEach((produkt) => {
+                total += produkt.pris
+            })
+            console.log("metode 3 sum: " + total)
+            
+            //totalpris metode 4
+            function beregnTotalSum() {
+                let total = 0;
+
+                for(let i = 0; i < handlekurv.length; i++) {
+                    total += handlekurv[i].pris;
+                }
+                return total;
+            }
+        console.log("funksjon: " + beregnTotalSum());
+
+        //skriver ut metode 1 til id utskrift
+        document.getElementById("utskrift").innerHTML += totalPris
+        </script>
+</body>
+</html>
