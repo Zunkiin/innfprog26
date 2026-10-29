@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 4: Gjett tallet</title>
+</head>
+<body>
+    <h1>Gjett tallet</h1>
+    <input type="number" id="gjetning" min="1" max="10">
+    <button id="gjettKnapp">Gjett tallet</button>
+
+    <p id="resultat"></p>
+    <script>
+
+        const hemmeligTall = 7
+
+        const input = getElementById("gjetning")
+        const button = getElementById("gjettKnapp")
+        const resultat = getElementById("resultat")
+
+        function sjekkGjetning() {
+        
+            const gjett = parseInt(input.value)
+            if (gjett === hemmeligTall) {
+                resultat.textContent = "du har riktig!"
+            } else if (gjett > hemmeligTall) {
+                resultat.textContent = "For Høyt! prøv gjen"
+            } else if (gjett < hemmeligTall) {
+                resultat.textContent = "For lavt! prøv igjen!"
+            }
+        }
+
+    </script>
+
+</body>
+</html>
